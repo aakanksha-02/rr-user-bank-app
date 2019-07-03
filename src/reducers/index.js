@@ -4,7 +4,8 @@ export default (state, action) => {
     case 'WITHDRAW_MONEY':
       return{
         ...state,
-        currentBalance: state.currentBalance-action.amount
+        currentBalance: (state.currentBalance >= action.amount) ? (state.currentBalance-action.amount) : (state.currentBalance),
+        message: (state.currentBalance >= action.amount) ? `Succussfully Withdrawn $ ${action.amount}` : 'Insufficient Balance'
       };
     default: 
       return state;

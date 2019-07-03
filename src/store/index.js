@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware } from 'redux';
-// import { composeWithDevTools } from 'redux-devtools-extension';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 import reducer from '../reducers';
 
@@ -8,8 +8,8 @@ const initialState = {
   currentBalance: '50000'
 };
 
-export const store = createStore(reducer, initialState);
-//   , composeWithDevTools(
-//   applyMiddleware(),
-// ));
+export const store = createStore(reducer, initialState
+  , composeWithDevTools(
+  applyMiddleware(),
+));
 

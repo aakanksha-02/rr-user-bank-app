@@ -5,12 +5,11 @@ import reducer from '../reducers';
 
 const initialState = { 
   name: 'Jenny',
-  currentBalance: '50000',
+  currentBalance: 50000,
   message: ''
 };
 
-export const store = createStore(reducer, initialState
-  , composeWithDevTools(
+export const store = createStore(reducer, initialState, composeWithDevTools(
   applyMiddleware(),
 ));
 

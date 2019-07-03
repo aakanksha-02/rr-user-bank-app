@@ -1,22 +1,22 @@
 import React from 'react'
 import { store } from '../store';
 
-function setWithdrawOptionCreator(withdrawOption){
+function setDepositOptionCreator(depositOption){
   return {
-    type: 'WITHDRAW_MONEY',
-    amount: withdrawOption
+    type: 'DEPOSIT_MONEY',
+    amount: depositOption
   }
 }
 
 function dispatchBtnAction(e){
-  const withdrawOption = e.target.dataset.option;
-  store.dispatch(setWithdrawOptionCreator(withdrawOption));
+  const depositOption = e.target.dataset.option;
+  store.dispatch(setDepositOptionCreator(depositOption));
 }
 
-const WithdrawButtonGroup = ({ withdrawOptions }) => (
+const DepositButtonGroup = ({ depositOptions }) => (
   <div>
     { 
-      withdrawOptions.map((option, i) => (
+      depositOptions.map((option, i) => (
         <button
           data-option= { option }
           key = { `btn-${i}` }
@@ -30,4 +30,4 @@ const WithdrawButtonGroup = ({ withdrawOptions }) => (
   </div>
 );
 
-export default WithdrawButtonGroup;
+export default DepositButtonGroup;

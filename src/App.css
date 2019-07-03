@@ -1,4 +1,48 @@
-.App {
+.app {
+  margin: 2em 8em;
+  width: 400px;
+  padding: 10px;
   text-align: center;
+  border: 1px solid black;
+  border-radius: 3px;
+  background: white;
 }
-
+.accountHolderName{
+  padding-top: 5px;
+}
+.currentBalanceBox{
+  margin: 1em 5em;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 3px;
+  background: lightcoral;
+}
+.currentBalance{
+  /* height: auto; */
+  font-size: 1.5em
+}
+.smallText{
+  font-size: .5em;
+  margin-top: 10px;
+}
+.mediumText{
+  font-size: 1.5em;
+}
+.largeText{
+  font-size: 2em;
+}
+.message{
+  border: none;
+  font-size: 0.8em;
+  margin: 0.5em;
+}
+.btn{
+  /* border: none; */
+  border: 1px solid black;
+  padding: 0.5em 1em;
+  font-size: 0.8em;
+  border-radius: 3px;
+  background-color: royalblue;
+  margin: 0.5em;
+  position: relative;
+}
